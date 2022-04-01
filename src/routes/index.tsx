@@ -1,9 +1,7 @@
 import React from 'react';
-import { Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-// import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Characters from '../screens/Characters';
@@ -53,17 +51,7 @@ export const Routes = () => {
         }}>
         <Stack.Group>
           <Stack.Screen name="BottomRoutes" component={BottomRoutes} />
-          <Stack.Screen
-            name="Details"
-            component={Details}
-            // sharedElements={(route, _, showing) => {
-            //   const { index } = route.params;
-            //   if (Platform.OS !== 'ios' && !showing) {
-            //     return [];
-            //   }
-            //   return [`${index}`];
-            // }}
-          />
+          <Stack.Screen name="Details" component={Details} />
         </Stack.Group>
       </Stack.Navigator>
     </NavigationContainer>

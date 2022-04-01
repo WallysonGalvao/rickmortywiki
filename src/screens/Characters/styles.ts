@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/native';
-import { FlatList } from 'react-native';
+import { FlatList, FlatListProps } from 'react-native';
 import { BottomSheetModal as _BottomSheetModal } from '@gorhom/bottom-sheet';
 
 import { Character } from '~/types/common';
@@ -17,7 +17,7 @@ export const Search = styled.TextInput`
 `;
 
 export const CharacterList = styled(
-  FlatList as new () => FlatList<Character[]>,
+  FlatList as new (props: FlatListProps<Character>) => FlatList<Character[]>,
 ).attrs({
   numColumns: 2,
   columnWrapperStyle: {

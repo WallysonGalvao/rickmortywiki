@@ -38,7 +38,7 @@ const Details = () => {
   );
 
   const isLoading = results.some(result => result.isLoading);
-  const episodes = results.map(result => result.data);
+  const episodes = results.map(result => result.data) as Episode[];
 
   const keyExtractor = (item: Episode) => item.id.toString();
 
@@ -50,7 +50,7 @@ const Details = () => {
         <Ionicons name="arrow-back-outline" size={25} />
       </S.BackButton>
 
-      <S.InfoContainer status={character.status}>
+      <S.InfoContainer>
         <S.Name>{character.name}</S.Name>
 
         <S.BadgeContainer>

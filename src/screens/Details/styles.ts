@@ -1,17 +1,10 @@
 import styled, { css, DefaultTheme } from 'styled-components/native';
+import { FlatList, FlatListProps } from 'react-native';
 import FastImage from 'react-native-fast-image';
-import { FlatList } from 'react-native';
-import LinearGradient, {
-  LinearGradientProps,
-} from 'react-native-linear-gradient';
+import LinearGradient from 'react-native-linear-gradient';
 import { darken } from 'polished';
 
 import { Episode, Status } from '~/types/common';
-import { parseStatus } from '~/utils';
-
-type GradientProps = LinearGradientProps & {
-  status: Status;
-};
 
 export const Image = styled(FastImage).attrs({
   resizeMode: 'contain',
@@ -58,11 +51,9 @@ export const BadgeText = styled.Text`
   `}
 `;
 
-export const InfoContainer = styled(LinearGradient).attrs<GradientProps>(
-  ({ status }) => ({
-    colors: ['transparent', parseStatus(status)],
-  }),
-)<GradientProps>`
+export const InfoContainer = styled(LinearGradient).attrs(({ theme }) => ({
+  colors: ['transparent', theme.colors.darkTransparent],
+}))`
   position: absolute;
   top: 290px;
   left: 0;
@@ -83,9 +74,8 @@ export const LastLocation = styled.Text`
   ${({ theme }) => css`
     color: ${theme.colors.white};
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     margin-top: 10px;
-    font-weight: 500;
   `}
 `;
 
@@ -105,7 +95,7 @@ export const BackButton = styled.TouchableOpacity`
 `;
 
 export const EpisodeList = styled(
-  FlatList as new () => FlatList<Episode[]>,
+  FlatList as new (props: FlatListProps<Episode>) => FlatList<Episode[]>,
 ).attrs({
   showsVerticalScrollIndicator: true,
   ListHeaderComponentStyle: {

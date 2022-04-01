@@ -1,4 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components/native';
+import FastImage from 'react-native-fast-image';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import { Status } from '~/types/common';
@@ -13,7 +14,7 @@ export const Container = styled.TouchableOpacity`
   `}
 `;
 
-export const Image = styled.Image`
+export const Image = styled(FastImage)`
   width: 100%;
   height: ${RFValue(150)}px;
   border-top-right-radius: ${RFValue(10)}px;

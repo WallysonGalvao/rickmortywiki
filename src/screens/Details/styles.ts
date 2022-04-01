@@ -1,4 +1,5 @@
 import styled, { css, DefaultTheme } from 'styled-components/native';
+import FastImage from 'react-native-fast-image';
 import { FlatList } from 'react-native';
 import LinearGradient, {
   LinearGradientProps,
@@ -12,7 +13,7 @@ type GradientProps = LinearGradientProps & {
   status: Status;
 };
 
-export const Image = styled.Image.attrs({
+export const Image = styled(FastImage).attrs({
   resizeMode: 'contain',
 })`
   width: 500px;

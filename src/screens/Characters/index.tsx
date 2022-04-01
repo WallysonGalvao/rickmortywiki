@@ -112,6 +112,7 @@ const Characters = () => {
         onEndReachedThreshold={1}
         onEndReached={loadMore}
         ListFooterComponent={isFetchingNextPage ? renderSpinner : null}
+        testID="characters_list"
       />
 
       <S.BottomSheetModal

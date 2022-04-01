@@ -26,7 +26,7 @@ export const Title = styled.Text`
   ${({ theme }) => css`
     padding: 15px;
     color: ${theme.colors.blue};
-    background-color: ${theme.colors.white};
+    background-color: ${theme.colors.aliceblue};
   `}
 `;
 

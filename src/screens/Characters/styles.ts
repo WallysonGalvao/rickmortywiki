@@ -4,10 +4,6 @@ import { BottomSheetModal as _BottomSheetModal } from '@gorhom/bottom-sheet';
 
 import { Character } from '~/types/common';
 
-export const Container = styled.View`
-  background-color: #ffffff;
-`;
-
 export const Search = styled.TextInput`
   ${({ theme }) => css`
     margin-horizontal: 20px;
@@ -53,6 +49,5 @@ export const Shadow = styled.View`
 
     z-index: 2;
     background-color: ${theme.colors.darkTransparent};
-    /* opacity: 0.5; */
   `}
 `;

@@ -2,6 +2,7 @@ import React, { useCallback, useRef, useState } from 'react';
 import { ActivityIndicator } from 'react-native';
 import { useInfiniteQuery } from 'react-query';
 import { BottomSheetModal } from '@gorhom/bottom-sheet';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { Card } from '~/components/Card';
 import { Filter } from '~/components/Filter';
@@ -87,7 +88,7 @@ const Characters = () => {
   const renderSpinner = () => <ActivityIndicator size={100} />;
 
   return (
-    <S.Container>
+    <SafeAreaView>
       <S.Search
         onChangeText={onChangeSearch}
         value={textToSearch}
@@ -128,7 +129,7 @@ const Characters = () => {
       </S.BottomSheetModal>
 
       {isActive && <S.Shadow />}
-    </S.Container>
+    </SafeAreaView>
   );
 };
 

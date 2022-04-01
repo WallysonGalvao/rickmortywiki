@@ -1,21 +1,23 @@
 import styled, { css, DefaultTheme } from 'styled-components/native';
+import { RFValue } from 'react-native-responsive-fontsize';
+
 import { Status } from '~/types/common';
 
 export const Container = styled.TouchableOpacity`
   ${({ theme }) => css`
-    width: 40%;
-    border-width: 1px;
+    width: ${RFValue(40)}%;
+    border-width: ${RFValue(1)}px;
     border-color: ${theme.colors.blue}
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: ${RFValue(10)}px;
+    margin-bottom: ${RFValue(10)}px;
   `}
 `;
 
 export const Image = styled.Image`
   width: 100%;
-  height: 150px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  height: ${RFValue(150)}px;
+  border-top-right-radius: ${RFValue(10)}px;
+  border-top-left-radius: ${RFValue(10)}px;
   align-self: center;
 `;
 

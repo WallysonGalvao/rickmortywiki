@@ -18,7 +18,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <BottomSheetModalProvider>
           <QueryClientProvider client={queryClient}>
-            <StatusBar barStyle={'light-content'} />
+            <StatusBar barStyle={'dark-content'} />
             <Routes />
           </QueryClientProvider>
         </BottomSheetModalProvider>

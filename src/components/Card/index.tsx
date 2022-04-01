@@ -1,5 +1,5 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import { Character } from '~/types/common';
 
@@ -11,7 +11,7 @@ import * as S from './styles';
 
 export const Card = ({ character }: CardProps) => {
   const { navigate } = useNavigation();
-  const handleDetail = () => navigate('Detail', { character });
+  const handleDetail = () => navigate('Details', { character });
 
   return (
     <S.Container onPress={handleDetail}>

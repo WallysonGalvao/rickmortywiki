@@ -3,6 +3,8 @@ import { useQueries, useQuery } from 'react-query';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+import { EpisodeInfo } from '~/components/EpisodeInfo';
+
 import { getEpisodeId } from '~/utils';
 import { Character, Episode } from '~/types/common';
 import { getEpisode } from '~/services/requests/characters/queries';
@@ -77,7 +79,8 @@ const Details = () => {
     return (
       <>
         {index === 0 && <S.Episodes>Episodes</S.Episodes>}
-        <S.EpisodeContainer>
+        <EpisodeInfo episode={episode} />
+        {/* <S.EpisodeContainer>
           <S.EpisodeContentLeft>
             <S.EpisodeValue>{episode.episode}</S.EpisodeValue>
           </S.EpisodeContentLeft>
@@ -85,7 +88,7 @@ const Details = () => {
             <S.EpisodeName>{episode.name}</S.EpisodeName>
             <S.EpisodeValue>{episode.air_date}</S.EpisodeValue>
           </S.EpisodeContentRight>
-        </S.EpisodeContainer>
+        </S.EpisodeContainer> */}
       </>
     );
   };

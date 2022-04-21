@@ -4,7 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import Characters from '../screens/Characters';
+import Characters from '~/screens/Characters';
+import Episodes from '~/screens/Episodes';
 import Details from '~/screens/Details';
 
 import { Character } from '~/types/common';
@@ -16,6 +17,7 @@ export type RootStackParamList = {
 
 export type RootBottomParamList = {
   Characters: undefined;
+  Episodes: undefined;
 };
 
 export const BottomRoutes = () => {
@@ -34,6 +36,16 @@ export const BottomRoutes = () => {
           tabBarLabel: 'Characters',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Episodes"
+        component={Episodes}
+        options={{
+          tabBarLabel: 'Episodes',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="tv" color={color} size={size} />
           ),
         }}
       />

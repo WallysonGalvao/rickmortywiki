@@ -24,16 +24,28 @@ jest.mock('@react-navigation/native', () => {
   };
 });
 
-setupServer(
+const handlers = [
   rest.get('/character', (_, res, ctx) =>
     res(
       ctx.status(200),
       ctx.json({ pageParams: [undefined], pages: [charactersMock] }),
     ),
   ),
-);
+];
+
+const server = setupServer(...handlers);
 
 describe('Characters', () => {
+  beforeAll(() => {
+    server.listen();
+  });
+  // afterEach(() => {
+  //   server.resetHandlers();
+  // });
+  afterAll(() => {
+    server.close();
+  });
+
   it('should render a list', async () => {
     const { toJSON, findByText } = renderWithClient(<Characters />);
 

@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 import BottomSheet from '@gorhom/bottom-sheet';
 
 import { Card } from '~/components/Card';
-import { EpisodeInfo } from '~/components/EpisodeInfo';
+import { ListInfo } from '~/components/ListInfo';
 
 import { Character, Episode } from '~/types/common';
 import {
@@ -14,7 +14,7 @@ import {
 import { useDebouncedValue } from '~/hooks/useDebouncedValue';
 
 import * as S from './styles';
-import { CharacterList } from '../Characters/styles';
+import { CharacterList, Search } from '../Characters/styles';
 
 const Episodes = () => {
   const bottomSheetRef = useRef<BottomSheet>(null);
@@ -43,7 +43,7 @@ const Episodes = () => {
 
   const renderEpisodeItem = ({ item }: { item: Episode }) => (
     <S.EpisodeButton onPress={() => handleSelectEpisode(item)}>
-      <EpisodeInfo episode={item} />
+      <ListInfo episode={item} />
     </S.EpisodeButton>
   );
 
@@ -64,18 +64,12 @@ const Episodes = () => {
     }
   }, [debouncedValue, episodes?.results]);
 
-  useEffect(() => {
-    if (episodes?.results?.length) {
-      setEpisodesFiltered(episodes?.results);
-    }
-  }, [episodes?.results]);
-
   return (
     <S.SafeAreaView>
       <S.EpisodeContainer>
         <S.EpisodeName>{charactersByEpisode?.episode?.name}</S.EpisodeName>
         <S.EpisodeAirDate>
-          {charactersByEpisode?.episode?.air_date}
+          {`${charactersByEpisode?.episode?.episode} | ${charactersByEpisode?.episode?.air_date}`}
         </S.EpisodeAirDate>
       </S.EpisodeContainer>
 
@@ -90,7 +84,7 @@ const Episodes = () => {
         ref={bottomSheetRef}
         index={0}
         snapPoints={['3%', '25%', '50%']}>
-        <S.Search
+        <Search
           onChangeText={onChangeSearch}
           value={textToSearch}
           placeholder="Search for episodes"

@@ -2,17 +2,17 @@ import styled, { css } from 'styled-components/native';
 import { FlatList, FlatListProps } from 'react-native';
 import { SafeAreaView as _SafeAreaView } from 'react-native-safe-area-context';
 
-import { Episode } from '~/types/common';
+import { Location } from '~/types/common';
 
 export const SafeAreaView = styled(_SafeAreaView)`
   flex: 1;
 `;
 
-export const EpisodeContainer = styled.View`
+export const LocationContainer = styled.View`
   margin-bottom: 10px;
 `;
 
-export const EpisodeName = styled.Text`
+export const LocationName = styled.Text`
   ${({ theme }) => css`
     color: ${theme.colors.blue};
     font-size: 18px;
@@ -21,13 +21,18 @@ export const EpisodeName = styled.Text`
   `}
 `;
 
-export const EpisodeAirDate = styled.Text`
+export const LocationDimension = styled.Text`
+  font-size: 16px;
+  text-align: center;
+`;
+
+export const LocationType = styled.Text`
   font-size: 18px;
   text-align: center;
 `;
 
-export const EpisodeList = styled(
-  FlatList as new (props: FlatListProps<Episode>) => FlatList<Episode[]>,
+export const LocationList = styled(
+  FlatList as new (props: FlatListProps<Location>) => FlatList<Location[]>,
 )``;
 
-export const EpisodeButton = styled.TouchableOpacity``;
+export const LocationButton = styled.TouchableOpacity``;

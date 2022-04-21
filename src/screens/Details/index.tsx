@@ -3,7 +3,7 @@ import { useQueries, useQuery } from 'react-query';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { EpisodeInfo } from '~/components/EpisodeInfo';
+import { ListInfo } from '~/components/ListInfo';
 
 import { getEpisodeId } from '~/utils';
 import { Character, Episode } from '~/types/common';
@@ -79,16 +79,7 @@ const Details = () => {
     return (
       <>
         {index === 0 && <S.Episodes>Episodes</S.Episodes>}
-        <EpisodeInfo episode={episode} />
-        {/* <S.EpisodeContainer>
-          <S.EpisodeContentLeft>
-            <S.EpisodeValue>{episode.episode}</S.EpisodeValue>
-          </S.EpisodeContentLeft>
-          <S.EpisodeContentRight>
-            <S.EpisodeName>{episode.name}</S.EpisodeName>
-            <S.EpisodeValue>{episode.air_date}</S.EpisodeValue>
-          </S.EpisodeContentRight>
-        </S.EpisodeContainer> */}
+        <ListInfo episode={episode} />
       </>
     );
   };

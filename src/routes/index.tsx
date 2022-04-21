@@ -6,6 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import Characters from '~/screens/Characters';
 import Episodes from '~/screens/Episodes';
+import Locations from '~/screens/Locations';
 import Details from '~/screens/Details';
 
 import { Character } from '~/types/common';
@@ -18,6 +19,7 @@ export type RootStackParamList = {
 export type RootBottomParamList = {
   Characters: undefined;
   Episodes: undefined;
+  Locations: undefined;
 };
 
 export const BottomRoutes = () => {
@@ -46,6 +48,16 @@ export const BottomRoutes = () => {
           tabBarLabel: 'Episodes',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="tv" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Locations"
+        component={Locations}
+        options={{
+          tabBarLabel: 'Locations',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="globe" color={color} size={size} />
           ),
         }}
       />

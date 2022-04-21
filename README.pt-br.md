@@ -55,16 +55,24 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ```bash
 # Clone este repositório
 $ git clone https://github.com/WallysonGalvao/rickmortywiki.git
+
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd rickmortywiki
+
 # Instale as dependências
 $ yarn install
+
 # Instale as dependências no ios
 $ cd ios & pod install
+
 # Execute a aplicação
 $ yarn android ou yarn ios
 ```
 
 ---
 
-Feito com horas em frente ao :computer: por [Wallyson Galvão](https://www.linkedin.com/in/wallyson-galvao/)
+<p align="center">Feito com horas em frente ao :computer: by <a href="https://linkedin.com/in/wallyson-galvao" target="blank">Wallyson Galvão</a></p>
+<p align="center">
+<a href="https://linkedin.com/in/wallyson-galvao" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="wallyson-galvao" height="25" width="25" /></a>
+<a href="https://medium.com/@wallyson.galvao" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="@wallyson.galvao" height="25" width="25" /></a>
+</p>

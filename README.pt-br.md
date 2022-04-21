@@ -26,7 +26,7 @@
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-executando">Executando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-executando">Executando</a>
 </p>
 <br>
 
@@ -71,7 +71,7 @@ $ yarn android ou yarn ios
 
 ---
 
-<p align="center">Feito com horas em frente ao :computer: by <a href="https://linkedin.com/in/wallyson-galvao" target="blank">Wallyson Galvão</a></p>
+<p align="center">Feito com horas em frente ao :computer: by <a href="https://linkedin.com/in/wallyson-galvao" target="blank"> Wallyson Galvão</a></p>
 <p align="center">
 <a href="https://linkedin.com/in/wallyson-galvao" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="wallyson-galvao" height="25" width="25" /></a>
 <a href="https://medium.com/@wallyson.galvao" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="@wallyson.galvao" height="25" width="25" /></a>

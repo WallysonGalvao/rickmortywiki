@@ -26,11 +26,11 @@
   <a href="#-projeto">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-techs">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#rocket-run">Run</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-run">Run</a>
 </p>
 <br>
 
-## 💻 Projeto
+## 💻 Project
 
 This project was inpired by [Joy Shaheb's](https://www.freecodecamp.org/news/react-js-project-build-a-rick-and-morty-character-wiki/) article for Freecodecamp.
 
@@ -40,7 +40,7 @@ This project was inpired by [Joy Shaheb's](https://www.freecodecamp.org/news/rea
  <img alt="Logo Rick and Morty Characters Wiki" title="#rickyandmorty" src=".github/mockup.png" width="400px" />      
 </h1>
 
-## :rocket: Tecnologias
+## :rocket: Techs
 
 This project was developed with the following technologies:
 
@@ -71,7 +71,7 @@ $ yarn android ou yarn ios
 
 ---
 
-<p align="center">Feito com horas em frente ao :computer: by <a href="https://linkedin.com/in/wallyson-galvao" target="blank">Wallyson Galvão</a></p>
+<p align="center">Made with hours in front :computer: by <a href="https://linkedin.com/in/wallyson-galvao" target="blank"> Wallyson Galvão</a></p>
 <p align="center">
 <a href="https://linkedin.com/in/wallyson-galvao" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="wallyson-galvao" height="25" width="25" /></a>
 <a href="https://medium.com/@wallyson.galvao" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/medium.svg" alt="@wallyson.galvao" height="25" width="25" /></a>

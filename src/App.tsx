@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar, StyleSheet } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 

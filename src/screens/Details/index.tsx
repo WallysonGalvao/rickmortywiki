@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { useQueries, useQuery } from 'react-query';
+import { useQueries, useQuery } from '@tanstack/react-query';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -29,15 +29,15 @@ const Details = () => {
     getEpisode({ id: firstSeenEpisodeId }),
   );
 
-  const results = useQueries(
-    character.episode.map(episode => {
+  const results = useQueries({
+    queries: character.episode.map(episode => {
       const episodeId = getEpisodeId({ episode });
       return {
         queryKey: ['episode', episodeId],
         queryFn: () => getEpisode({ id: episodeId }),
       };
     }),
-  );
+  });
 
   const isLoading = results.some(result => result.isLoading);
   const episodes = results.map(result => result.data) as Episode[];
